@@ -55,7 +55,7 @@
             <h3 class="text-center pt-3 " style="font-size: 2rem;font-family:adobe-garamond-pro;margin-top: 0%;">Add Meals <i class="fas fa-plus-square"></i></i> </h3>
         </div>
 <div class="container">     
-  <form class="py-4 px-4" ame='form' method="POST" action="{{ url_for('addmeals') }}" enctype="multipart/form-data">
+  <form class="py-4 px-4" name='form' method="POST" action="{{ url_for('addmeals') }}" enctype="multipart/form-data">
             <div class="panel-body">
                 <div class="row">
                     {{ form.csrf_token }}

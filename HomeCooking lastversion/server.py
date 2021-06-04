@@ -19,9 +19,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['DEBUG'] = True
 app.config['SECRET_KEY'] = 'mysecret'
 
-
+configure_uploads(app, photos)
 
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
+
 
 
 #  ************les tables ************
@@ -105,6 +110,7 @@ def basket():
 def meals():
     repas=Repas.query.all()
     return render_template("meals.html", repas=repas)
+
 @app.route("/login_client")
 def login_client():
     return render_template("login_client.html")
@@ -121,7 +127,6 @@ def inbox():
     # print("**",m)
     return render_template('admin/inbox.html', admin=True,messages=messages)
 
-    # return render_template("admin/inbox.html")
 @app.route("/admin/add_meals",methods=['GET','POST'])
 def addmeals():
     form = AddRepas()
@@ -130,15 +135,25 @@ def addmeals():
         new_meal=Repas(title=form.title.data,categorie=form.categorie.data,store=form.store.data,price=form.price.data,description=form.description.data,image=image_url)
         db.session.add(new_meal)
         db.session.commit()
+        print(new_meal)
         return redirect(url_for('admin'))
 
     return render_template('admin/add_meals.html', admin=True,form=form)
 
-    # return render_template("/admin/add_meals.html")
 @app.route("/login_admin")
 def login_admin():
     return render_template("login_admin.html")
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    manager.run()
+
+
+
+# python server.py db init  
+
+###################################################################
+# ila ajoutiti chi haja f labase de donne diri had les commande :  # 
+            # python server.py db migrate #
+            # python server.py db upgrade # 
+###################################################################
