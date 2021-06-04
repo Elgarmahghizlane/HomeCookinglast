@@ -1,0 +1,67 @@
+<!-- {% extends "base.html" %}
+{% block title %} Meals{% endblock %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row ">
+
+        <div class="col-lg-5">	
+            <div class="imagevue">
+                <img class="img-fluid" src="{{ produit.image }}" alt="">
+            </div>
+        </div>
+    
+        <div class="col-lg-7">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fas fa-info-square mr-2"></i>Détails du produit</h3>
+                </div>
+                <div class="panel-body">
+                    <h3> {{ produit.nom }} 
+                    {% if produit.stock > 0 %}
+                        <small>(En stock)</small>
+                        {% else %}
+                        <small>(En rupture de stock)</small>
+                    {% endif %}
+                    
+                    </h3> 
+                    <h4>{{ produit.prix }}dh</h4>
+
+                    <hr>
+                    <p>                 
+                        {{ produit.description }}
+                    </p>
+                    <hr>
+                <form action="{{ url_for('ajouter_ou_panier') }}" method="POST">
+                    {% if produit.stock > 0 %}
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="row ">
+                                    <div class="col-lg-12 QTE">
+                                        Quantité
+                                    </div>
+                                    <div class="col-lg-12 ml-3 mt-2">
+                                        {{ form.csrf_token}}
+                                        {{ form.quantité(class='form-control', type='number',min=1 ,max=produit.stock,step=1,value=1)}}
+                                        {{ form.id(value=produit.id) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    {% endif %}
+                </div>
+                    <div class="panel-footer">
+                        {% if produit.stock > 0 %}
+                        <button type="submit" class="btn1 ml-3">
+                            <i class="fas fa-shopping-cart  mr-2"></i>Ajouter au panier
+                        </button>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+</div>
+{% endblock %} -->

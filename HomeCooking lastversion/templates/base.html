@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CDN-bootstrap-start -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- CDN-bootstrap-end -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <!-- CDN-css -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <!-- img logo -->
+        <link rel="icon" href="static/images/logo/1.png">
+        <!-- font awesome -->
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+     <title>{% block title %}{% endblock %}</title>
+ 
+    </head>
+     
+
+<body class="body" >
+  <!-- <header class="header"  > -->
+  <nav class="navbar navbar-expand-lg  navbar-light  sticky-top" >
+    <a class="navbar-brand" href="/"><h2><img src="/static/images/logo/1.png" style="width: 6rem; height: 5rem; position: sticky;  "  alt="logo">  </h2></a>
+       
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+           <ul class="navbar-nav migraines">
+              <li class="nav-item "> 
+                 <a class="nav-link text-dark mr-5 "  href="/"> Home </a>  
+              </li>
+
+              <li class="nav-item dropdown" >
+                 <a class="nav-link dropdown-toggle  text-dark mr-5 " href="/meals"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Meals
+                </a>
+                <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/meals#Salads" data-nav-section="Salads">Salads & Condiments</a>
+                  <a class="dropdown-item" href="/meals#Meat"data-nav-section="Meat" >Meat,Poultry & Fish</a>
+                  <a class="dropdown-item" href="/meals#Sweets" data-nav-section="Sweets">Sweets </a>
+                </div>
+              </li>
+              <li>
+                <a class="nav-link text-dark mr-5 "  href="/about">About
+                </a>
+                </li>
+             <li>
+              <a class="nav-link text-dark mr-5 "  href="/contact">Contact 
+              </a>
+            </li>
+            <li>
+              
+              <a class="nav-link text-dark mr-5 "  href="/basket">Basket<i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+            
+           </ul>
+
+        </div>
+  </nav>
+
+
+<!-- </header> -->
+{% block content %}
+{% endblock content %}
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/"> <img src="/static/images/icon/facebook.png" style="height: 2.5rem ; width: 4rem;" alt=""></a>         
+          <a href="https://www.facebook.com/"> <img src="/static/images/icon/twitter.png" style="height: 3rem ; width: 3rem;" alt=""></a>          
+          <a href="https://www.facebook.com/"> <img src="/static/images/icon/instagram.png" style="height: 3rem ; width: 4rem;" alt=""></a>         
+
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <div class="container pt-4">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2" style="color:black ;font-weight: bold;">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <div class="col-md-5 col-12">
+            <div class="form-outline mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2" style="color:black ;font-weight: bold;" >Email address</label>
+            </div>
+          </div>
+          <div class="col-auto">
+      
+    <button type="submit" class="btn  mb-4" href="/login" >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+      </div>
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:Home Cooking
+        
+      </div>
+      <!-- Copyright -->
+    </footer>
+  
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

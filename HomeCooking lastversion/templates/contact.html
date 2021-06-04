@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content%}
+<div class="container" style=" padding-bottom: 5%; " >
+    <div class="row pt-5 ">
+       <div class="col-lg-4 col-md-8 col-xd-12">
+          <p>For any questions or claim contact us :<br>Please use the form next to get in touch</p>
+        </div>
+       <div class="col-lg-8 col-md-4 col-xd-12">     
+        <form name='form' method='POST' action="{{ url_for('contact') }}" enctype='multipart/form-data'>           
+             {{form.csrf_token}} 
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Name</b> </label>
+              {{form.name(class='form-control')}}
+            <small id="name" class="form-text text-muted">Full Name</small>          
+          </div>    
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Email address</b></label>
+                {{form.email(class='form-control', placeholder='name@example.com')}}           
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Phone number</b> </label>
+            {{form.phone(class='form-control')}}           
+
+            <!-- <input class="form-control" id="exampleFormControlInput1" placeholder="" name='phone' type='text' value='' >   -->
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Home adress</b> </label>
+            {{form.address(class='form-control') }}          
+            <!-- <input class="form-control" id="exampleFormControlInput1" placeholder="" name='adress' type='text' value='' >  -->
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1"><b>Leave a message</b></label>
+              {{form.message(class='form-control',placeholder='Leave your message')}}
+
+            <!-- <textarea class="form-control"  name="message" id="msg"  rows="3"></textarea> -->
+          </div>
+          
+          <button  class="btn " type="submit" value="Send" >Send</button>
+
+        </form>
+        </div>
+      </div>
+</div>
+  {% endblock content %}

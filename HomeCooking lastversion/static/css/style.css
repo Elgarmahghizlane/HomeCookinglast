@@ -1,0 +1,119 @@
+
+body{
+    box-sizing:border-box;
+    font-family: "adobe-garamond-pro";
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-repeat: no-repeat
+}
+/* **********************navbar***********************/
+.navbar{
+    background-color: white;
+}
+.nav-link {
+    font-size:1.1rem;
+    font-family: "adobe-garamond-pro";
+    font-weight: bold;
+}
+.navbar-brand{
+    margin-left: 12% !important;
+    
+}  
+.nav-link:hover{
+    background-color: rgb(255, 255, 101);
+    border-radius: 10px;
+}
+.dropdown-item:hover{
+    background-color: rgb(255, 255, 101);
+    border-radius: 10px;
+}
+/* **********************end navbar***********************/
+/* end navbar */
+.btn{
+    background-color: rgb(255, 255, 101);   
+    border-radius: 10px;
+    font-family: "adobe-garamond-pro";
+    font-weight: bold;
+    padding: 12px 28px;
+}
+.btn:hover {
+    background-color: #9eaf9e
+}
+.carousel{
+    height: 35rem;  
+}
+
+.page-footer{
+    background-color:rgba(161, 161, 161, 0.301);
+}
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px
+}
+
+.card2 {
+    margin: 0px 40px
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}

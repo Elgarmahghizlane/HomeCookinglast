@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% block title %}Meals{% endblock %}
+
+{% block content %}
+<section id="Salads"data-nav-section="Salads">
+  <h3  class="text-center pt-3 " style="font-size: 2rem;font-family:adobe-garamond-pro"> Salads & Condiments </h3>
+  <!-- <div class="row mx-auto container-fluid"> -->
+  <section>
+    <div class="row mx-auto container-fluid"> 
+      {% for repas in repas %}
+        <div class="product text-center col-lg-3 col-md-4 col-12">
+          
+          <img class="img-fluid  mb-3" src="{{ repas.image}}" alt="">
+          <h5 class="p-title">{{ repas.title }}</h5>
+          <h5 class="p-categorie">{{ repas.categorie }}</h5>
+          <h5 class="p-price">{{ repas.price }}dh</h5>
+
+            <hr>
+          <!-- <p class="mt-4">
+            <a href="{{ url_for('vue', id=produit.id) }}" class="btnvue">
+              <i class="fas fa-eye"></i> vue
+            </a>
+            {% if produit.stock > 0 %}
+            <a href="{{ url_for( 'Ajoutrapid', id=produit.id) }}" class="btnadd">
+              <i class="fas fa-shopping-cart"></i>Ajouter au panier
+            </a>
+            {% endif %}
+          </p> -->
+        </div>
+        {% endfor%} 
+    </div>
+  </section>
+</section>
+
+
+
+   
+   
+        
+ 
+  <!-- <section id="Meat"data-nav-section="Meat">
+    <h3  class="text-center pt-3 " style="font-size: 2rem;font-family:adobe-garamond-pro"> Meat </h3>
+    <div class="container text-center py-4">
+        <h3> Meat,Poultry & Fish</h3>   
+        <hr class="hr1 mx-auto">
+        <p>Ici vous pouvez consulter nos nouveaux produits à un prix raisonnable</p>       
+    </div>
+    -->
+    <!-- <section id="Meat"data-nav-section="Meat">
+    <h3  class="text-center pt-3 " style="font-size: 2rem;font-family:adobe-garamond-pro"> Meat </h3>
+
+      <div class="row mx-auto container-fluid"> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+
+        {% for produit in produits %}
+          <div class="product text-center col-lg-3 col-md-4 col-12">
+            <img class="img-fluid imProduit mb-3" src="{{ produit.image}}" alt="">
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> 
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">{{ produit.nom }}</h5>
+            <h5 class="p-price">{{ produit.prix }}dh</h5>
+              <hr>
+            <p class="mt-4">
+              <a href="{{ url_for('vue', id=produit.id) }}" class="btnvue">
+                <i class="fas fa-eye"></i> vue
+              </a>
+              {% if produit.stock > 0 %}
+              <a href="{{ url_for( 'Ajoutrapid', id=produit.id) }}" class="btnadd">
+                <i class="fas fa-shopping-cart"></i>Ajouter au panier
+              </a>
+              {% endif %}
+            </p>
+          </div>
+          {% endfor%} 
+      </div> -->
+    <!-- </section> -->
+  <!-- </section> -->
+  <!-- <section id="Sweets"data-nav-section="Sweets" >
+    <div class="container text-center py-4">
+        <h3> Sweets </h3>   
+        <hr class="hr1 mx-auto">
+        <p>Ici vous pouvez consulter nos nouveaux produits à un prix raisonnable</p>       
+    </div>
+    -->
+    <!-- <section id="Sweets"data-nav-section="Sweets" >
+    <h3  class="text-center pt-3 " style="font-size: 2rem;font-family:adobe-garamond-pro"> Sweets </h3>
+
+      <div class="row mx-auto container-fluid"> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, eveniet fuga deleniti perferendis culpa id rem atque labore eum delectus laboriosam vero quo magni quod similique voluptatum. Dignissimos, at.</p>
+
+        {% for produit in produits %}
+          <div class="product text-center col-lg-3 col-md-4 col-12">
+            <img class="img-fluid imProduit mb-3" src="{{ produit.image}}" alt="">
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> 
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">{{ produit.nom }}</h5>
+            <h5 class="p-price">{{ produit.prix }}dh</h5>
+              <hr>
+            <p class="mt-4">
+              <a href="{{ url_for('vue', id=produit.id) }}" class="btnvue">
+                <i class="fas fa-eye"></i> vue
+              </a>
+              {% if produit.stock > 0 %}
+              <a href="{{ url_for( 'Ajoutrapid', id=produit.id) }}" class="btnadd">
+                <i class="fas fa-shopping-cart"></i>Ajouter au panier
+              </a>
+              {% endif %}
+            </p>
+          </div>
+          {% endfor%} 
+      </div>
+    </section>
+  </section> -->
+<!-- <div class="container">
+        <H1  id="Salads"data-nav-section="Salads">TEST1</H1>
+
+        <div class="row" >
+                    <div class="col-lg-3 col-md-6 col-xd12">
+                        <img src="/static/images/LVH/img1.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                        <p><b>Lunettes de vue Gucci GG-0202-O :</b><br>
+                        <h3>199 DH</h3> <br> </p>
+                        <del>249 DH</del>  
+                    </div> 
+                    <div class="col-lg-3 col-md-6 col-xd12">
+                        <img src="/static/images/LVH/img2.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                        <p><b>Lunettes de Vue Rétro avec Verres:</b><br>
+                        <h3>149 DH</h3><br> </p>
+                        <del>199 DH</del> 
+                    </div> 
+                    <div class="col-lg-3 col-md-6 col-xd12">
+                        <img src="/static/images/LVH/img1.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                        <p><b>Lunettes de vue Gucci GG-0202-O :</b><br>
+                        <h3>199 DH</h3> <br> </p>
+                        <del>249 DH</del>  
+                    </div> 
+                    <div class="col-lg-3 col-md-6 col-xd12">
+                        <img src="/static/images/LVH/img2.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                        <p><b>Lunettes de Vue Rétro avec Verres:</b><br>
+                        <h3>149 DH</h3><br> </p>
+                        <del>199 DH</del> 
+                    </div> 
+                    <div class="col-lg-3 col-md-6 col-xd12">
+                        <img src="/static/images/LVH/img3.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                        <p><b> Lunettes de vue MARC JACOBS Gris:</b><br>
+                        <h3>199 DH</h3><br></p>
+                        <del>249 DH</del>  
+                    </div> 
+                    <div class="col-lg-3 col-md-6 col-xd12">
+                        <img src="/static/images/LVH/img4.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                        <p><b>Lunettes de vue Money EVIDENCE BILLIONNAIRE NOIR ECAILLE OR:</b><br>
+                        <h3>149 DH</h3> <br> </p>
+                        <del>199 DH</del> 
+                    </div> 
+
+                </div>
+                <h1  id="Meat"data-nav-section="Meat" >test2</h1>
+    
+        <div class="row">
+           <div class="col-lg-3 col-md-6 col-xd12">
+                <img src="/static/images/LVH/img1.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                <p><b>Lunettes de vue Gucci GG-0202-O :</b><br>
+                <h3>199 DH</h3> <br> </p>
+                <del>249 DH</del>  
+            </div> 
+            <div class="col-lg-3 col-md-6 col-xd12">
+                <img src="/static/images/LVH/img2.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                <p><b>Lunettes de Vue Rétro avec Verres:</b><br>
+                <h3>149 DH</h3><br> </p>
+                <del>199 DH</del> 
+            </div> 
+                <div class="col-lg-3 col-md-6 col-xd12">
+                    <img src="/static/images/LVH/img5.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                    <p><b>Lunettes de vue Dita MIKRO BLACK ROSE GOLD:</b><br>
+                    <h3>149 DH</h3> <br> </p>
+                    <del>199 DH</del>  
+                </div> 
+                <div class="col-lg-3 col-md-6 col-xd12">
+                    <img src="/static/images/LVH/img6.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                    <p><b>Lunettes de vue SHINY SILVER-GREY :</b><br>
+                    <h3>149 DH</h3> <br></p>
+                    <del>199 DH</del>  
+                </div> 
+                <div class="col-lg-3 col-md-6 col-xd12">
+                    <img src="/static/images/LVH/img7.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                    <p><b> Lunettes de vue Oakley ALIAS AMBER BROWN TORTOISE:</b><br>
+                    <h3>149 DH</h3> <br> </p>
+                    <del>249 DH</del>  
+                </div> 
+                <div class="col-lg-3 col-md-6 col-xd12">
+                    <img src="/static/images/LVH/img8.jpg" class="img-fluid image-responsive  img-thumbnail" alt="LVF" >
+                    <p><b>Lunettes de Vue Oliver Peoples WILLMAN COCOBOLO:</b><br>
+                    <h3>149 DH</h3> <br></p>
+                    <del>199 DH</del>  
+                </div> 
+        
+            </div>
+        </div>
+    </div> -->
+{% endblock content %}

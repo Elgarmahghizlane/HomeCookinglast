@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CDN-bootstrap-start -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- CDN-bootstrap-end -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <!-- CDN-css -->
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- img logo -->
+        <link rel="icon" href="static/images/logo/1.png">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+
+        <title>Inbox</title>  
+    </head>
+        <body >
+            <nav class="navbar navbar-expand-lg  navbar-light  sticky-top" >
+                <a class="navbar-brand" href="/"><h2><img src="/static/images/logo/1.png" style="width: 6rem; height: 5rem; position: sticky;  "  alt="logo">  </h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav migraines">
+                        <li class="nav-item "> 
+                            <a class="nav-link text-dark mr-5 "  href="/admin">Orders <i class="far fa-cart-arrow-down"></i></a>  
+                        </li>
+                        <li class="nav-item "> 
+                            <a class="nav-link text-dark mr-5 "  href="/admin/inbox">Inbox <i class="fas fa-inbox-in"></i></a>  
+                        </li>
+                        <li class="nav-item "> 
+                            <a class="nav-link text-dark mr-5 "  href="/admin/add_meals">Add Meals </a>  
+                        </li>
+                      
+                        <li>                    
+                            <a class="nav-link text-dark mr-5 " style="background-color: rgb(255, 255, 101);border-radius: 10px; font-family: adobe-garamond-pro;                    font-weight: bold;
+                            padding: 12px 28px;" href="/">Check Home page </a>
+                        </li>
+                    </ul>     
+                </div>
+            </nav>
+    <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5  py-5 mx-auto" style="margin-top: 0%;">
+      <div class="card card0 border-0">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="text-center pt-3 " style="font-size: 2rem;font-family:adobe-garamond-pro;margin-top: 0%;">Inbox <i class="fas fa-inbox-in"></i> </h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th><th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th>Messages</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for msg in messages %}
+                                    <tr>
+                                        <td>{{ msg.id }}</td>
+                                        <td>{{ msg.name }}</td>
+                                        <td>{{ msg.email }}</td>
+                                        <td>{{ msg.phone }} </td>
+                                        <td>{{ msg.address }} </td>
+                                        <td>{{ msg.message }} </td>
+                                    </tr>
+                                    {% endfor %}
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            <footer class="text-center">
+                <div class="text-center text-dark p-3" style="background-color:rgb(255, 255, 101);">
+                 Copyright2021 Home Cooking</div>
+             </footer> 
+            </div>
+        </div>
+
+
+  
+             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+     </body>
+     </html>
